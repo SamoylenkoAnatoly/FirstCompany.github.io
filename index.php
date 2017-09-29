@@ -37,11 +37,18 @@ name="email" id="email"/></br>
 name="submit" value="Submit" />
 </form>
 <?php
-// PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = "CREATE TABLE registration1_tbl(
+// DB connection info
+$host = "tcp:vol1.database.windows.net,1433;";
+$user = "vol1";
+$pwd = "Simpsons1";
+$db = "NewBD";
+try{
+    $conn = new PDO
+( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
+    $conn->setAttribute
+( PDO::ATTR_ERRMODE, 
+PDO::ERRMODE_EXCEPTION );
+    $sql = "CREATE TABLE registration_tbl(
     id INT NOT NULL IDENTITY(1,1) 
     PRIMARY KEY(id),
     name VARCHAR(30),
@@ -49,15 +56,10 @@ try {
     date DATE)";
     $conn->query($sql);
 }
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
+catch(Exception $e){
     die(print_r($e));
 }
-
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "vol1@vol1", "pwd" => "Simpsons1", "Database" => "NewBD", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:vol1.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
+echo "<h3>Table created.</h3>";;
 
 ?>
 </body>
