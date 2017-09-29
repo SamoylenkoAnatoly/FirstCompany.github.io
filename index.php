@@ -38,7 +38,7 @@ name="submit" value="Submit" />
 </form>
 <?php
 // DB connection info
-$host = "tcp:vol1.database.windows.net,1433;";
+$host = "tcp:vol1.database.windows.net,1433";
 $user = "vol1";
 $pwd = "Simpsons1";
 $db = "NewBD";
