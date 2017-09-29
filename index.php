@@ -1,143 +1,65 @@
 
-
 <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>hc_slider</title>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="js/hc_slider.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/hc_slider.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body>
-    <!-- my menu -->
-    <div class="main-back" id ="main-back">
-    <div class="header" >
-    <div class="logo"><a href = "#main-back"><img src="img/logo.png"> <h2>ФРАКДЖЕТ-ВОЛГА</h2></a></div>
-    	<a href = "#Service"><div class="knopka1"><p>УСЛУГИ</p></div></a>
-    	<a href = "#AboutUs"><div class="knopka2"><p>ОБОРУДОВАНИЕ</p></div></a>
-    	<a href = "#client"><div class="knopka3"><p>ПАРТНЕРЫ</p></div></a>
-    	<a href = "#contact"><div class="knopka4"><p>КОНТАКТЫ</p></div></a>
-    </div>
-
-    <div class="addition-back">
-    	<div class = "text"><h2 style="color: white;">Высокотехнологичный сервис для нефтяных и газовых компаний
-</h2>
-<br>
-<p>ООО «ФракДжет-Волга» была создана в 2007 году группой профессионалов нефтегазовой отрасли для оказания услуг нефте и газодобывающим предприятиям в области капитального ремонта скважин.<p>
-</div>
-    </div>
-	
-</div>
-
-
-<div class="Service" id = "Service">
-	<div class="left-back">
-	<div class="textLeft">
-		<h2>Сферы </h2>
-		<p>работы</p>
-	</div>
-	</div>
-
-<div class="right-back">
-
-<img src = "img/drilling.png" id ="i1"><div class="k1"><ul class = "s1"><hr><li>Бурение</li></ul> <p>Бурение нефтяных
-и газовых скважин</p> </div>
-<img src = "img/Fixed.png" id ="i2"> <div class="k2"><ul  class = "s1"><hr><li>Ремонт</li></ul>  <p>
-Капитальный и текущий ремонт
-нефтяных и газовых скважин</p> </div>
-<img src = "img/metroui.png" id ="i3"><div class="k3"><ul  class = "s1"><hr><li>Разрыв</li></ul> <p>Гидравлический
-разрыв пласта</p> </div>
-<img src = "img/fire.png" id ="i4">	<div class="k4"> <ul  class = "s1"><hr><li>Технологии</li></ul>  <p>Работы с применением
-колтюбинговых технологий</p> </div>
-
-</div>
-</div>
-</div>
-
-	<div class = "Byr" id = "AboutUs">
-		
-
-<div class = "textByr"><h2>Буровая установка ZJ-40</h2>
-<p>Парк буровых установок ZJ-40 позволяет вести строительство эксплуатационных и разведочных скважин на нефть и газ глубиной до 4000 метров, а так же осуществлять бурение боковых стволов.</p>
-<p>Высокие технико-экономические показатели обеспечиваются за счет применения передовых долотных программ в сочетании с высокомоментными и оборотистыми забойными двигателями.</p>
-	</div>
-		<div class="ByrRight">
-	</div>
-	</div>
-
-
-
-
-<div class = "Fixe" id = "Fixe">
-		
-
-<div class = "textFixe"><h2>УПА 60/80</h2>
-<p>Предназначена для текущего ремонта, освоения и капитального ремонта нефтяных и газовых скважин, а также ведения буровых работ на скважинах различного назначения: поисковых, гидрогеологических, водозаборных, эксплуатационных (нефтяных, газовых) в районах с умеренным и холодным климатом при температуре окружающего воздуха от -45 С до +45 С</p>
-
-	</div>
-		<div class="FixeRight">
-	</div>
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-<div class="client" id = "client">
-	<p>НАШИ ПАРТНЕРЫ</p>
-	<div class="client0"><img src = "img/27_300x300_d54.png"></div>
-<div class="client1"><img src = "img/01_300x300_d54.png"></div>
-<div class="client2"><img src = "img/17_300x300_d54.png"></div>
-<div class="client3"><img src = "img/22_300x300_d54.png"></div>
-
-</div>
-
-
-    <div class="contact" id = "contact">
-<div class="CenterT">
-		<p>СВЯЖИТЕСЬ
-С НАМИ</p>
-<hr>
-<div class = "CenterTLeft">	
-	<p>Телефон: +7 (495) 000-00-00
-	<br>
-		<br>
-ЧАСЫ РАБОТЫ:
- 	<br>
-ПН–ПТ: 7:00–22:00
-	<br>
-​СБ: 8:00–22:00
-	<br>
-​ВС: 8:00–23:00</p>
-</div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9946.71274987183!2d46.09890523546643!3d51.44570369383387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114ba2aedd2a587%3A0x74015f8908078fc6!2z0KTRgNCw0LrQlNC20LXRgi3QktC-0LvQs9Cw!5e0!3m2!1sru!2sru!4v1490180712671" class = "map"  frameborder="0" allowfullscreen></iframe>
-</div>	
-    </div>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-  $(window).scroll(function() {
-  	var a = $(document).scrollTop();
-
-
-  			$(".text").css({"transform":"translate(0%,"+a/5+"%)","opacity":1-a/700})
-
-    if (a > 100) {
-      $(".textLeft").addClass("test1");
-       $(".right-back").addClass("test1");
-    } 
-});
-});
-</script>
-    </body>
+<head>
+<Title>Registration Form</Title>
+<style type="text/css">
+    body { background-color:
+ #fff; border-top: solid 10px #000;
+ color: #333; font-size: .85em;
+ margin: 20; padding: 20;
+ font-family: "Segoe UI",
+ Verdana, Helvetica, Sans-Serif;
+    }
+    h1, h2, h3,{ color: #000; 
+margin-bottom: 0; padding-bottom: 0; }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.75em; }
+    h3 { font-size: 1.2em; }
+    table { margin-top: 0.75em; }
+    th { font-size: 1.2em;
+ text-align: left; border: none; padding-left: 0; }
+    td { padding: 0.25em 2em 0.25em 0em; 
+border: 0 none; }
+</style>
+</head>
+<body>
+<h1>Register here!</h1>
+<p>Fill in your name and 
+email address, then click <strong>Submit</strong> 
+to register.</p>
+<form method="post" action="index.php" 
+enctype="multipart/form-data" >
+      Name  <input type="text" 
+name="name" id="name"/></br>
+      Email <input type="text" 
+name="email" id="email"/></br>
+      <input type="submit" 
+name="submit" value="Submit" />
+</form>
+<?php
+// DB connection info
+$host = "localhost\sqlexpress";
+$user =  "vol1";
+$pwd = "Simpsons1";
+$db = "NewBD";
+try{
+    $conn = new PDO
+( "sqlsrv:Server= $host ; Database = $db ", $user, $pwd);
+    $conn->setAttribute
+( PDO::ATTR_ERRMODE, 
+PDO::ERRMODE_EXCEPTION );
+    $sql = "CREATE TABLE registration_tbl(
+    id INT NOT NULL IDENTITY(1,1) 
+    PRIMARY KEY(id),
+    name VARCHAR(30),
+    email VARCHAR(30),
+    date DATE)";
+    $conn->query($sql);
+}
+catch(Exception $e){
+    die(print_r($e));
+}
+echo "<h3>Table created.</h3>";
+?>
+</body>
 </html>
