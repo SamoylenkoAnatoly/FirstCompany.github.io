@@ -1,3 +1,4 @@
+<?php
 try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -15,3 +16,4 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 echo "<h3>Table created.</h3>";
+?>
