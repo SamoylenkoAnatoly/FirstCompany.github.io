@@ -44,7 +44,7 @@ try {
     // Insert data
     $sql_insert = 
 "INSERT INTO registration_tbl (name, email, date) 
-                   VALUES (?,?,?)";
+                   VALUES ($name,$email,$date)";
     $stmt = $conn->prepare($sql_insert);
     $stmt->bindValue(1, $name);
     $stmt->bindValue(2, $email);
@@ -74,9 +74,7 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>No one is currently registered.</h3>";
 }
-    
-    
-    ?>
+?>
 </form>
 
 </body>
