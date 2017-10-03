@@ -39,13 +39,7 @@ name="submit" value="Submit" />
     try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "CREATE TABLE registrationf_tbl2(
-    id INT NOT NULL IDENTITY(1,1) 
-    PRIMARY KEY(id),
-    name VARCHAR(30),
-    email VARCHAR(30),
-    date DATE)";
-    $conn->query($sql);
+   
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
