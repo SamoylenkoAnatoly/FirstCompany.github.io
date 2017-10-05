@@ -31,7 +31,7 @@ else // Иначе если поля не пустые
 {
 $login2 = $_POST['Login']; // Присваиваем переменной значение из поля с логином             
 $password2 = $_POST['Password']; // Присваиваем другой переменной значение из поля с паролем
-$query = "INSERT INTO `users` (Login, Password) VALUES ('$login2', '$password2')"; // Создаем переменную с запросом к базе данных на отправку нового юзера
+$query = "INSERT INTO `registrationf_tbl` (name, email) VALUES ('$login2', '$password2')"; // Создаем переменную с запросом к базе данных на отправку нового юзера
 $result = mysqli_query($connection, $query) or die(mysql_error()); // Отправляем переменную с запросом в базу данных 
 echo "<div align='center'>Регистрация прошла успешно!</div>"; // Сообщаем что все получилось
 }
