@@ -1,5 +1,5 @@
 
-<form method="post" action="index.php" 
+<form method="post" 
 enctype="multipart/form-data" >
       Login  <input type="text" 
 name="Login" id="Login"/></br>
