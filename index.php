@@ -90,9 +90,9 @@ if(count($registrants) > 0) {
    
    {
        
-    $sql = "DELETE*
+    $sql1 = "DELETE*
     FROM registrationf_tbl1";
-    $conn->query($sql);
+    $conn->query($sql1);
    } 
 ?>
 </form>
