@@ -36,7 +36,7 @@ name="email" id="email"/></br>
       <input type="submit" 
 name="submit" value="Submit" />
        <input type="submit" 
-name="submit2" value="Submit2" />
+name="submit2" value="Очистка" />
     <?php
     try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
@@ -86,7 +86,14 @@ if(count($registrants) > 0) {
     echo "<h3>No one is currently registered.</h3>";
 }
     
-   if(isset($_POST["submit2"])) {echo "Нажал на кнопку";} 
+   if(isset($_POST["submit2"]))
+   
+   {
+       
+    $sql = "DELETE*
+    FROM registrationf_tbl2";
+    $conn->query($sql);
+   } 
 ?>
 </form>
 
