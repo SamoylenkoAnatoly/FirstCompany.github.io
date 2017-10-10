@@ -47,6 +47,8 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 
+   if(isset($_POST["submit2"]))
+   {
     if(!empty($_POST)) {
 try {
     $name = $_POST['name'];
@@ -85,11 +87,9 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>No one is currently registered.</h3>";
 }
-    
+   }
    if(isset($_POST["submit2"]))
-   
-   {
-       
+   {    
     $sql1 = "DELETE *
     FROM registration_tbl1";
     $conn->query($sql1);
