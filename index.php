@@ -89,12 +89,7 @@ if(count($registrants) > 0) {
     echo "<h3>No one is currently registered.</h3>";
 }
 
-       if(isset($_POST["submit2"]))
-   {    
-    $sql1 = "DELETE *
-    FROM registration_tbl1";
-    $conn->query($sql1);
-   } 
+
 ?>
     
 </form>
