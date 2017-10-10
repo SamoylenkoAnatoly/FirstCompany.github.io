@@ -89,8 +89,7 @@ if(count($registrants) > 0) {
 }
        if(isset($_POST["submit2"]))
    {    
-    $sql1 = "DELETE *
-    FROM registration_tbl1";
+    $sql1 = "DELETE * FROM registration_tbl1";
     $conn->query($sql1);
    } 
 
