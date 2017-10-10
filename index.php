@@ -35,6 +35,8 @@ name="name" id="name"/></br>
 name="email" id="email"/></br>
       <input type="submit" 
 name="submit" value="Submit" />
+       <input type="submit2" 
+name="submit2" value="Submit2" />
     <?php
     try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
@@ -83,6 +85,8 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>No one is currently registered.</h3>";
 }
+    
+   if(isset($_POST["submit2"])) {echo "Нажал на кнопку";} 
 ?>
 </form>
 
