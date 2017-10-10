@@ -94,7 +94,7 @@ try {
 
    if(isset($_POST["submit2"]))
    {
-    $sql1 = "DELETE * FROM registration_tbl";
+    $sql1 = "DELETE  FROM registration_tbl";
     $conn->query($sql1);
    } 
 }
