@@ -87,17 +87,21 @@ if(count($registrants) > 0) {
 } else {
     echo "<h3>No one is currently registered.</h3>";
 }
-       if(isset($_POST["submit2"]))
+    
+try {
+    $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+   if(isset($_POST["submit2"]))
    {
-           try {
     $sql1 = "DELETE * FROM registration_tbl";
     $conn->query($sql1);
-           }
-           catch(Exception $e) {
-    die(var_dump($e));
-}
    } 
-
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
 ?>
     
 </form>
