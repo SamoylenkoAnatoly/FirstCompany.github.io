@@ -91,7 +91,7 @@ if(count($registrants) > 0) {
    {
        
     $sql = "DELETE*
-    FROM registrationf_tbl2";
+    FROM registrationf_tbl1";
     $conn->query($sql);
    } 
 ?>
