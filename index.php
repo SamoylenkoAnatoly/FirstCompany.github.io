@@ -35,7 +35,7 @@ name="name" id="name"/></br>
 name="email" id="email"/></br>
       <input type="submit" 
 name="submit" value="Submit" />
-       <input type="submit2" 
+       <input type="submit" 
 name="submit2" value="Submit2" />
     <?php
     try {
