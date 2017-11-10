@@ -17,25 +17,53 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-if (isset($_POST['Submit1'])) // Отлавливаем нажатие на кнопку отправить 
-{
-if (empty($_POST['Login']))  // Условие - если поле логин пустое
-{
-echo "<script>alert('Поле  логин  не заполненно');</script>"; // Выводим сообщение об ошибке
-}          
-elseif (empty($_POST['Password'])) // Иначе если поле с паролем пустое
-{
-echo "<script>alert('Поле пароль не заполненно');</script>"; // Выводим сообщение об ошибке
-}                      
-else // Иначе если поля не пустые
-{
-$login2 = $_POST['Login']; // Присваиваем переменной значение из поля с логином             
-$password2 = $_POST['Password']; // Присваиваем другой переменной значение из поля с паролем
-$query = "INSERT INTO `registration_tbl` (name, email) VALUES ('$login2', '$password2')"; // Создаем переменную с запросом к базе данных на отправку нового юзера
-$result = mysqli_query($connection, $query) or die(mysql_error()); // Отправляем переменную с запросом в базу данных 
-echo "<div align='center'>Регистрация прошла успешно!</div>"; // Сообщаем что все получилось
-}
-} 
 
+function enter ()
+ { 
+$error = array(); //массив для ошибок 	
+if ($_POST['Login'] != "" && $_POST['Password'] != "") //если поля заполнены 	
+
+{ 		
+	$login = $_POST['Login']; 
+	$password = $_POST['Password'];
+
+	$rez = mysql_query("SELECT * FROM registration_tbl WHERE name=$login"); //запрашиваем строку из БД с логином, введённым пользователем 		
+	if (mysql_num_rows($rez) == 1) //если нашлась одна строка, значит такой юзер существует в БД 		
+
+	{ 			
+		$row = mysql_fetch_assoc($rez); 			
+		if (md5(md5($password).$row['salt']) == $row['Password']) //сравниваем хэшированный пароль из БД с хэшированными паролем, введённым пользователем и солью (алгоритм хэширования описан в предыдущей статье) 						
+
+		{ 
+		//пишем логин и хэшированный пароль в cookie, также создаём переменную сессии
+		setcookie ("name", $row['name'], time() + 50000); 						
+		setcookie ("email", md5($row['name'].$row['email']), time() + 50000); 					
+		$_SESSION['id'] = $row['id'];	//записываем в сессию id пользователя 				
+
+		$id = $_SESSION['id']; 				
+		lastAct($id); 				
+		return $error; 			
+	} 			
+	else //если пароли не совпали 			
+
+	{ 				
+		$error[] = "Неверный пароль"; 										
+		return $error; 			
+	} 		
+} 		
+	else //если такого пользователя не найдено в БД 		
+
+	{ 			
+		$error[] = "Неверный логин и пароль"; 			
+		return $error; 		
+	} 	
+} 	
+ 
+
+	else 	
+	{ 		
+		$error[] = "Поля не должны быть пустыми!"; 				
+		return $error; 	
+	} 
 ?>
 </form>
