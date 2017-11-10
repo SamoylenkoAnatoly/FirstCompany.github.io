@@ -1,3 +1,4 @@
+<p>34534534534534</p>
 
 <form method="post" action="registration.php"
 enctype="multipart/form-data" >
