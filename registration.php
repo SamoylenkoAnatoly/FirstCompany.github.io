@@ -19,4 +19,3 @@ catch (PDOException $e) {
 }
 
 ?>
-</form>
