@@ -5,8 +5,12 @@ try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	
-		
-	print ("hello");
+$a = "Select name From registration_tbl";
+$b = "Select email From registration_tbl";
+	if($_POST["Login"]==a||$_POST["Password"]==b)
+	{
+		print "Такой пользователь уже существует";
+	}
 
 	
 }
