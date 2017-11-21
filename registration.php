@@ -20,7 +20,7 @@ if ($_POST['Login'] != "" && $_POST['Password'] != "") //если поля за�
 
 { 		
 	print ("hello");
-} 
+} else {print ("123")}
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
