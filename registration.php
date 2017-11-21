@@ -7,8 +7,8 @@ try {
 	
 $a = "Select name From registration_tbl";
 $b = "Select email From registration_tbl";
-	$conn->query($a);
-	print $conn;
+	$conn->print query($a);
+	
 		
 	
 }
