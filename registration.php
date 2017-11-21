@@ -7,11 +7,7 @@ try {
 	
 $a = "Select name From registration_tbl";
 $b = "Select email From registration_tbl";
-	if($_POST["Login"]==a||$_POST["Password"]==b)
-	{
-		print "Такой пользователь уже существует";
-	}
-
+	print $a$b
 	
 }
 catch (PDOException $e) {
