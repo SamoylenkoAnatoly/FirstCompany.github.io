@@ -7,7 +7,7 @@ try {
 	
 $a = "Select name From registration_tbl";
 $b = "Select email From registration_tbl";
-	print $a$b
+	print $a$b;
 	
 }
 catch (PDOException $e) {
