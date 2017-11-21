@@ -19,20 +19,8 @@ try {
 if ($_POST['Login'] != "" && $_POST['Password'] != "") //если поля заполнены 	
 
 { 		
-	print "hello";
+	print ("hello");
 } 
-else{ 
-	
-} 		
-	else 	
-	{ 		
-		$error[] = "Поля не должны быть пустыми!"; 				
-		return $error; 	
-	} 
-	
-	
-	
-}
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
