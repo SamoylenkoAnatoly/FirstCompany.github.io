@@ -12,16 +12,10 @@ name="Submit1" value="Submit1" />
 try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-
-
-function enter ()
- { 
-$error = array(); //массив для ошибок 	
+	
+	
+	
+	$error = array(); //массив для ошибок 	
 if ($_POST['Login'] != "" && $_POST['Password'] != "") //если поля заполнены 	
 
 { 		
@@ -59,12 +53,19 @@ if ($_POST['Login'] != "" && $_POST['Password'] != "") //если поля за�
 		return $error; 		
 	} 	
 } 	
- 
-
 	else 	
 	{ 		
 		$error[] = "Поля не должны быть пустыми!"; 				
 		return $error; 	
 	} 
+	
+	
+	
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+
 ?>
 </form>
