@@ -11,6 +11,7 @@ try {
     email VARCHAR(30),
     date DATE)";
     $conn->query($sql);
+    $a++;
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
