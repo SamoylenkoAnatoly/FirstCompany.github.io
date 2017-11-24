@@ -7,7 +7,7 @@ try {
 	$name = $_POST['Login'];
 	$pass = $_POST['Password'];
 
-	for(int i = 0 ; i<$s;i++){
+	for(int i = 1;i<$s;i++){
 	
 	$a = "Select name From registration_tbl where id ="+i+"";
 	$b = "Select email From registration_tbl where id ="+i+"";
