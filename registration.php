@@ -8,8 +8,8 @@ try {
 	$pass = $_POST['Password'];
 
 	
-	$a = "Select name From registration_tbl where id ="+1+"";
-	$b = "Select email From registration_tbl where id ="+1+"";
+	$a = "Select name From registration_tbl where id =1";
+	$b = "Select email From registration_tbl where id =1";
 		if($name == $a && $pass ==$b )
 		{
 			print (123);
