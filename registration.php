@@ -10,7 +10,7 @@ try {
 	
 	$a = "Select name From registration_tbl where id =1";
 	$b = "Select email From registration_tbl where id =1";
-		if($name == $a && $pass ==$b )
+		if($name == "abc" && $pass =="abc" )
 		{
 			print (123);
 		}
