@@ -9,9 +9,13 @@ try {
 
 	
 	$a = mysql_query($conn,"Select * From registration_tbl where name="+$name+"And email = "+$pass+"");
-		print($a);
-		
-	}
+	$resouce = mysqli_fetch_assoc($a)
+		if(mysqli_num_rows($resouce))
+		{
+			echo "1"
+		}
+		else {echo "0";}
+	
 	
 		
 	
