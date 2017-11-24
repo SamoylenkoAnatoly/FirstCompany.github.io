@@ -1,5 +1,5 @@
 <?php
-$a = 0;
+$s = 0;
 try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -11,7 +11,7 @@ try {
     email VARCHAR(30),
     date DATE)";
     $conn->query($sql);
-    $a++;
+$s = $s+1
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
