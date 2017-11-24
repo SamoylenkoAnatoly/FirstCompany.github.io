@@ -2,7 +2,6 @@
 <html>
 <head>
 <Title>Registration Form</Title>
-
 </head>
 <body>
 <h1>Register here!</h1>
@@ -22,6 +21,7 @@ name="submit2" value="Очистка" />
     
     
     <?php
+       $s = 0;
     try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -45,6 +45,7 @@ try {
     $stmt->bindValue(2, $email);
     $stmt->bindValue(3, $date);
     $stmt->execute();
+      $s = $s+1
 }
 catch(Exception $e) {
     die(var_dump($e));
