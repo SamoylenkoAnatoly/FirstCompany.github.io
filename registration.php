@@ -8,8 +8,8 @@ try {
 	$pass = $_POST['Password'];
 
 	
-	$a = mysql_query("Select name From registration_tbl where id =1");
-	$b = mysql_query("Select email From registration_tbl where id =1");
+	$a = mysql_query($conn,"Select name From registration_tbl where id =1");
+	$b = mysql_query($conn,"Select email From registration_tbl where id =1");
 		if($name == "abc" && $pass =="abc" )
 		{
 			print (123);
