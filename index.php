@@ -44,7 +44,7 @@ try {
     $stmt->bindValue(2, $email);
     $stmt->bindValue(3, $date);
     $stmt->execute();
-    
+      $s = $s+1;
 }
 catch(Exception $e) {
     die(var_dump($e));
