@@ -8,7 +8,7 @@ try {
 	$pass = $_POST['Password'];
 
 	
-	$a = mysql_query($conn,"Select * From registration_tbl where name="+$name+"And email = "+$pass+"");
+	$a = mysql_query($conn,"Select * From registration_tbl where name='$name'And email ='$pass");
 	$resouce = mysqli_fetch_assoc($a)
 		if(mysqli_num_rows($resouce))
 		{
