@@ -7,10 +7,9 @@ try {
 	$name = $_POST['Login'];
 	$pass = $_POST['Password'];
 
-	for(int i = 1;i<$s;i++){
 	
-	$a = "Select name From registration_tbl where id ="+i+"";
-	$b = "Select email From registration_tbl where id ="+i+"";
+	$a = "Select name From registration_tbl where id ="+1+"";
+	$b = "Select email From registration_tbl where id ="+1+"";
 		if($name == $a && $pass ==$b )
 		{
 			print (123);
