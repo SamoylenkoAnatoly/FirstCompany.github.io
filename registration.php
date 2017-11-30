@@ -9,10 +9,10 @@ email address, then click <strong>Submit</strong>
 to register.</p>
 <form method="post" action="registration.php" 
 enctype="multipart/form-data" >
-      Name  <input type="text" 
-name="name" id="name"/></br>
-      Email <input type="text" 
-name="email" id="email"/></br>
+      Login  <input type="text" 
+name="Login" id="name"/></br>
+      pass <input type="text" 
+name="pass" id="email"/></br>
       <input type="submit" 
 name="submit" value="Submit" />
        <input type="submit" 
@@ -20,7 +20,7 @@ name="submit2" value="Очистка" />
 
       <?php
       $log = $_POST['Login'];
-	$pass = $_POST['email'];
+	$pass = $_POST['pass'];
 try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
