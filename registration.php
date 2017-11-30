@@ -19,10 +19,12 @@ name="submit" value="Submit" />
 name="submit2" value="Очистка" />
 
       <?php
+      $log = $_POST['Login'];
+	$pass = $_POST['email'];
 try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-      $sql_select = "SELECT * FROM registration_tbl where (name = '123' And email = 'abc')";
+      $sql_select = "SELECT * FROM registration_tbl where (name = '$log' And email = '$pass')";
       $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
       if(count($registrants) > 0) {
