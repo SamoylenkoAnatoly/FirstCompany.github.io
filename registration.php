@@ -4,7 +4,7 @@ try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 	
-//	$name = $_POST['Login'];
+/*	$name = $_POST['Login'];
 //	$pass = $_POST['Password'];
 $sql_select = "SELECT * FROM registration_tbl where name='abc' And email ='abc'";
 $stmt = $conn->query($sql_select);
@@ -35,7 +35,7 @@ if(count($registrants) > 0) {
 	
 	
 		
-	
+*/	
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
