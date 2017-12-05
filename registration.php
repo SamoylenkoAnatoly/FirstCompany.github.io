@@ -33,8 +33,8 @@ $registrants = $stmt->fetchAll();
     echo "<tr><th>id</th></tr>";
 	      foreach($registrants as $registrant){
         echo "<tr><td>".$registrant['id']."</td></tr>";
-		       header ('Location: http://anatoly1.azurewebsites.net/example.php')// перенаправление на нужную страницу
-   exit();    // прерываем работу скрипта, чтобы забыл о прошлом
+		   header("Location: example.php");
+exit;
 	      }
     echo "</table>";
 } else {
