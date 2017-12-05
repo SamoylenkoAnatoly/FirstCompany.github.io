@@ -33,6 +33,8 @@ $registrants = $stmt->fetchAll();
     echo "<tr><th>id</th></tr>";
 	      foreach($registrants as $registrant){
         echo "<tr><td>".$registrant['id']."</td></tr>";
+		       header ('Location: example.php')// перенаправление на нужную страницу
+   exit();    // прерываем работу скрипта, чтобы забыл о прошлом
 	      }
     echo "</table>";
 } else {
