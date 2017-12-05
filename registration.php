@@ -24,23 +24,19 @@ name="submit2" value="Очистка" />
 try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-      $sql_select = "SELECT * FROM registration_tbl where (name = '$log' And email = '$pass')";
+      $sql_select = "SELECT id FROM registration_tbl where (name = '$log' And email = '$pass')";
       $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
       if(count($registrants) > 0) {
-    echo "<h2>People who are registered:</h2>";
+    echo "<h2>People who are authorization:</h2>";
     echo "<table>";
-    echo "<tr><th>Name</th>";
-    echo "<th>Email</th>";
-    echo "<th>Date</th></tr>";
+    echo "<tr><th>id</th></tr>";
     foreach($registrants as $registrant) {
-        echo "<tr><td>".$registrant['name']."</td>";
-        echo "<td>".$registrant['email']."</td>";
-        echo "<td>".$registrant['date']."</td></tr>";
+        echo "<tr><td>".$registrant['id']."</td></tr>";
     }
     echo "</table>";
 } else {
-    echo "<h3>No one is currently registered.</h3>";
+    echo "<h3>Incorrect input data.</h3>";
 }
 
 
