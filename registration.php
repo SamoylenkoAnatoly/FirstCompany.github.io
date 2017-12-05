@@ -31,7 +31,7 @@ $registrants = $stmt->fetchAll();
     echo "<h2>People who are authorization:</h2>";
     echo "<table>";
     echo "<tr><th>id</th></tr>";
-        echo "<tr><td>".$registrant['id']."</td></tr>";
+        echo "<tr><td>"$registrant['id']."</td></tr>";
     echo "</table>";
 } else {
     echo "<h3>Incorrect input data.</h3>";
