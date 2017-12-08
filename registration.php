@@ -15,8 +15,6 @@ name="Login" id="name"/></br>
 name="pass" id="email"/></br>
       <input type="submit" 
 name="submit" value="Submit" />
-       <input type="submit" 
-name="submit2" value="Очистка" />
 
       <?php
       $log = $_POST['Login'];
