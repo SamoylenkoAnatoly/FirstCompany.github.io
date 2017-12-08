@@ -32,6 +32,9 @@ $registrants = $stmt->fetchAll();
     echo "<table>";
     echo "<tr><th>id</th></tr>";
 	      foreach($registrants as $registrant){
+session_start();
+$_SESSION['log'] = 123; 
+$_SESSION['pass'] = $pass;
         echo "<tr><td>".$registrant['id']."</td></tr>";
 		   header("Location: example.php");
 exit;
