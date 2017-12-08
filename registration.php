@@ -10,7 +10,7 @@ to register.</p>
 <form method="post" action="registration.php" 
 enctype="multipart/form-data" >
       Login  <input type="text" 
-name="Login" id="name"/></br>
+name="Login" id="name" style = "border-radius:100%;"/></br>
       pass <input type="text" 
 name="pass" id="email"/></br>
       <input type="submit" 
