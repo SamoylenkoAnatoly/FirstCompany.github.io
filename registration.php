@@ -34,7 +34,8 @@ $registrants = $stmt->fetchAll();
 	      foreach($registrants as $registrant){
 session_start();
 $id = $registrant['id'];		      
-$_SESSION['id'] = $id; 
+$_SESSION['id'] = $id;  
+$_SESSION['log'] = $log; 
         
 		   header("Location: example.php");
 exit;
