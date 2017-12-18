@@ -100,8 +100,7 @@ catch (PDOException $e) {
       //Удаление по логину
    if(isset($_POST["submit3"]))
    {
-         
-         else{
+         if($_POST["delL"]=='')echo "Введите логин!!!";
          $loginfordel = $_POST["delL"];
      $sql1 = "DELETE FROM registration_tbl Where name = '$loginfordel'";
     $conn->query($sql1);
