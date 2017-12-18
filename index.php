@@ -100,7 +100,7 @@ catch (PDOException $e) {
       //Удаление по логину
    if(isset($_POST["submit3"]))
    {
-         if($_POST["delL"]==''){ echo "Введите логин!!!";}
+         if($_POST["delL"]=='')echo "Введите логин!!!";
          else{
          $loginfordel = $_POST["delL"];
      $sql1 = "DELETE FROM registration_tbl Where name = '$loginfordel'";
@@ -108,7 +108,6 @@ catch (PDOException $e) {
          echo "Удаление произошло";
    } 
             else{echo "Данный пользователь не найден";}
-   }
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
