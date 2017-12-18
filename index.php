@@ -103,6 +103,7 @@ catch (PDOException $e) {
          $loginfordel = $_POST["delL"];
      $sql1 = "DELETE FROM registration_tbl Where name = '$loginfordel'";
     $conn->query($sql1);
+         echo "Удаление произошло";
    } 
 }
 catch (PDOException $e) {
