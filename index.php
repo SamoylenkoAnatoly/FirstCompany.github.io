@@ -97,20 +97,19 @@ catch (PDOException $e) {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      //Удаление по логину
+      //Удаление по логину                                                                           
    if(isset($_POST["submit3"]))
    {
       if($_POST["delL"]=='')echo "Введите логин!!!";
          else{
-               if(count($registrants) > 0) {
+ 
          $loginfordel = $_POST["delL"];
      $sql1 = "DELETE FROM registration_tbl Where name = '$loginfordel'";
     $conn->query($sql1);
-               echo "Данный пользователь не найден";}
-          else{   echo "Удаление произошло"}
+            echo "Удаление произошло";  }
+          else{    echo "Данный пользователь не найден";}
          
          }
-   } 
           
 }
 catch (PDOException $e) {
