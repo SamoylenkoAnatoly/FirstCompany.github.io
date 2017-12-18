@@ -31,6 +31,9 @@ catch (PDOException $e) {
     die(print_r($e));
 }
     if(isset($_POST["submit"])) {
+          if( $_POST['name']=='' ||  $_POST['email']=='')
+          {echo 'Input your data';}
+          else{
 try {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -50,7 +53,8 @@ catch(Exception $e) {
     die(var_dump($e));
 }
 echo "<h3>Your're registered!</h3>";
-}         
+} 
+    }
 $sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
