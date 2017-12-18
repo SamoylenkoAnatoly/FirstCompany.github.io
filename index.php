@@ -101,7 +101,7 @@ catch (PDOException $e) {
    if(isset($_POST["submit3"]))
    {
          $loginfordel = $_POST["delL"];
-     $sql1 = "DELETE name FROM registration_tbl Where name = '$loginfordel'";
+     $sql1 = "DELETE FROM registration_tbl Where name = '$loginfordel'";
     $conn->query($sql1);
    } 
 }
