@@ -19,7 +19,7 @@ name="submit" value="Submit" />
        <input type="submit" 
 name="submit2" value="Очистка" />
         <input type="submit" 
-name="submit3" value="Удалить" style = "margin-left:100px" />  <input type="text"name="delL" id="del"/> <p>Введите логин, который вы хотите удалить</p>
+name="submit3" value="Удалить" style = "margin-left:100px" />  <input type="text"name="delL" id="del"/> <label for="del">Введите логин, который вы хотите удалить</label>
     
     
     
