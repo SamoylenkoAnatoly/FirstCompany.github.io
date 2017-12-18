@@ -18,6 +18,9 @@ name="email" id="email"/></br>
 name="submit" value="Submit" />
        <input type="submit" 
 name="submit2" value="Очистка" />
+        <input type="submit" 
+name="submit3" value="Удалить" style = "margin-left:100px" />  <input type="text"name="delL" id="del"/> <p>Введите логин, который вы хотите удалить</p>
+    
     
     
     <?php
@@ -30,6 +33,7 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
+      // Регистрация
     if(isset($_POST["submit"])) {
           if( $_POST['name']=='' ||  $_POST['email']=='')
           {echo 'Input your data';}
@@ -78,10 +82,25 @@ try {
     $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+      //Удаление все таблицы
    if(isset($_POST["submit2"]))
    {
     $sql1 = "DELETE  FROM registration_tbl";
     $conn->query($sql1);
+   } 
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+      try {
+    $conn = new PDO("sqlsrv:server = tcp:vol1.database.windows.net,1433; Database = NewBD", "vol1", "Simpsons1");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      //Удаление по логину
+   if(isset($_POST["submit2"]))
+   {
+    
    } 
 }
 catch (PDOException $e) {
